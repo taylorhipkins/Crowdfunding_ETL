@@ -1,5 +1,14 @@
 --before creating tables, a new schema was created titled 'crowdfunding_db_schema'. Each table was created
 --under this schema instead of the public schema. 
+--IMPORTANT--
+--1. To run this code, create a new database titled crowdfunding_db in pg admin 4. 
+--2. Within the crowdfunding_db database, make a new schema titled crowdfunding_db_schema. 
+--3. Right click the crowdfunding_db_schema schema and select Query Tool. 
+--4. In the query tool, run this code in the order that is shown below. If the tables are
+----not created in this exact order, there will be errors. 
+--5. When importing each csv file to the corresponding, you must import each file in the following order:
+-----1. subcategory, 2. contacts, 3. category, 4. campaign. If this order is not followed, errors will occur.
+-----PLEASE NOTE: each csv file is labeled to match the table that it should be imported to. 
 
 CREATE TABLE crowdfunding_db_schema.contacts(
 	contact_id INT PRIMARY KEY NOT NULL,
